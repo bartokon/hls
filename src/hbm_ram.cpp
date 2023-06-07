@@ -1,5 +1,4 @@
 #include "hbm_ram.hpp"
-#include <stdio.h>
 
 static double calculate_sum(
 	double d0,
@@ -60,6 +59,5 @@ void hbm_ram(unsigned int indexes[512], double data_hbm[512][4], double out[512]
 #pragma HLS INTERFACE mode=m_axi bundle=gmem2 port=out
 	for (auto i = 0; i < 512; ++i) {
 		out[i] = ram_access(indexes[i], data_hbm);
-		printf("%d: %d \n", i, out[i]);
 	}
 }
