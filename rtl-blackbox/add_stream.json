@@ -1,0 +1,63 @@
+{
+  "c_files": [
+    {
+      "c_file": "add.cpp",
+      "cflag": ""
+    }
+  ],
+  "c_function_name": "add_stream",
+  "rtl_files": [
+    "add_stream.v"
+  ],
+  "c_parameters": [
+    {
+      "c_name": "a",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "FIFO_empty_flag": "a_empty_flag",
+        "FIFO_read_enable": "a_read_enable",
+        "FIFO_data_read_in": "a"
+      }
+    },
+    {
+      "c_name": "b",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "FIFO_empty_flag": "b_empty_flag",
+        "FIFO_read_enable": "b_read_enable",
+        "FIFO_data_read_in": "b"
+      }
+    },
+    {
+      "c_name": "c",
+      "c_port_direction": "out",
+      "rtl_ports": {
+        "FIFO_full_flag": "c_full_flag",
+        "FIFO_write_enable": "c_write_enable",
+        "FIFO_data_write_out": "c"
+      }
+    }
+  ],
+  "rtl_top_module_name": "add_stream",
+  "rtl_performance": {
+    "II": "1",
+    "latency": "1"
+  },
+  "rtl_resource_usage": {
+    "BRAM": "0",
+    "DSP": "0",
+    "FF": "0",
+    "LUT": "0",
+    "URAM": "0"
+  },
+  "rtl_common_signal": {
+    "module_clock": "ap_clk",
+    "module_reset": "ap_rst",
+    "module_clock_enable": "ap_ce",
+    "ap_ctrl_chain_protocol_idle": "ap_idle",
+    "ap_ctrl_chain_protocol_start": "ap_start",
+    "ap_ctrl_chain_protocol_ready": "ap_ready",
+    "ap_ctrl_chain_protocol_done": "ap_done",
+    "ap_ctrl_chain_protocol_continue": "ap_continue"
+  }
+}
